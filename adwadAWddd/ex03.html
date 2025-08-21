@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도미</title>
+</head>
+
+<body>
+    <script>
+        //521~522p 자료형 변환 함수 연습www
+
+        let a = 10; // number 형 값(정수) 10을 변수 a에 할당. typeof a === 'number'
+        let b = 3; // number 형 값(정수) 3을 변수 b에 할당. typeof b === 'number'
+
+        // ---- 기본 산술 연산 ----
+        console.log("덧셈 a+b =", a + b); // 덧셈 : 10+3 ->  결과 13 (number)
+        console.log("뺄셈 a-b =", a - b);// 뺄셈 : 10-3 ->  결과 7 (number)
+        console.log("곱셈 a*b =", a * b);// 곱셈 : 10*3 ->  결과 30 (number)
+        console.log("나눗셈 a/b =", a / b);// 나눗셈 : 10/3 ->  결과 3.333... (부동소수, number)
+        console.log("나머지 a%b =", a % b);// 나머지 : 10 % 3 ->  결과 1 (number)
+
+        // *** 현재의 값을 먼저 사용하고, 그 후에 증가/감소 됨 ***
+        console.log("a++ :", a++);
+        //a = 10; a 가 console.log 출력
+        //a = 11;a 가 +1 증가
+        //증가연산자 a++ 의미 a=a+1; a를 1증가시키고, 그 값을 a에 재할당
+        //증가연산자 후위증가 ((a) 사용 -> 구문실행 -> 증가)
+
+        console.log("a-- :", a--);
+        //a = 11; a 가 console.log 출력
+        //a = 10; a 가 -1 감소
+        //감소연산자 a-- 의미 a+a-1; a를 1감소시키고, 그 값을 a에 재할당
+        //감소연산자 감소 ((a) 사용-> 구문실행 -> 감소)
+
+        // *** 값을 먼저 증가/감소 시키고 증가/감소된 값이 연산에 사용됨 ***
+        console.log("a++ :", a++);
+        //증가연산자 전위증가 (증가 -> (a) 사용-> 구문실행)
+
+        console.log("a-- :", a--);
+        //감소연산자 전위감소 (감소 -> (a) 사용-> 구문실행)
+
+
+
+        //[퀴즈1]
+        console.log("============[퀴즈1]==========");
+        let abc = 0;
+while(++abc <5){
+ //1. ++ : abc = abc + 1
+            //2. abc = 1 -> abc = 2 ->
+            //3. <
+            //4. 5
+            console.log("++abc:",abc); // abc == 1, abc == 2... abc = 4
+}
+//퀴즈2
+console.log("============[퀴즈2]==========");
+let abcd = 0;
+
+while(abcd++ < 5){
+            //1.abcd = 0
+            //2. <
+            //3. 5
+            //4. ++ : abcd = abcd + 1
+            console.log("abcd++:",abcd); // abcd == 1, abcd == 2... abcd = 5
+        }
+
+        //연산 오브 할당
+        let x = 5; // 변수 x 에 5를 대입/할당
+
+        x += 3;
+        console.log("x 계산값 :",x);
+
+        let y =5; // 변수 y 에 5를 대입/할당
+
+        y = y - 2;
+        //y -=2;
+        console.log("y 계산값 :", y);
+
+
+
+        //z *= 5 -> z = z * 5
+        //q /= 5 ->q = q / 5
+        //t %= -> t = t % 5
+
+        // 비교 연산자
+        let num = 5; // mum 변수에 숫자 5 할당
+        let str =  "5"; //str 변수에 문자 5 할당
+
+       // console.log(num = str); // 문자 5를 재할당ㅇ
+        console.log(typeof num); // 문자 5
+        console.log(num == str); // true (값만)
+        console.log(num === str); // false(값, 타입)
+        console.log(num != str); // (값만비교) flase
+        //num 숫자 5, str 문자 5=> true
+        console.log(num !== str); // (값,타입 모두 비교) true
+        //num 숫자 5,str 문자 5 => false
+
+        console.log("num > 3:",num > 3); //
+        console.log("num < 3:",num < 3); //
+        console.log("num <= 3:",num <= 3); //
+        console.log("num >= 3:",num >= 3); //
+
+        //논리 연산자=====================
+        let a1 = true;
+        let a2 = false;
+        console.log("a1 && a2 :",a1 && a2); // AND 둘다 true 일때 true
+        console.log("a1 || a2",a1 || a2); // OR 둘중 하나라도
+        console.log("!a1:",!a); // NOT반대
+        
+        //조건 (삼항) 연산자 ==============
+
+        let xvak = 10;
+        let ya = 20;
+        let max = (xvak > ya) ? xvak : ya;
+
+let age = 17;
+
+let sss = (age <= 19) ? "미성년자" : "성인";
+console.log(sss);
+
+
+        // 조건(비교) ? true면 ㄱㄱ : false면 ㄱㄱ;
+
+
+    </script>
+</body>
+</html>
